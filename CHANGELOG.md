@@ -21,5 +21,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.0.1] 2018-08-22
 
 ### Added
-- Content for changelog, readme, license files
 - Initiate project with create-react-app
+- Content for changelog, readme, license files
+- Storybook and ESLint

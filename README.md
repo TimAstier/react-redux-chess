@@ -31,6 +31,24 @@ $ npm install
 - TDD with unit testing (Jest)
 - Keep CHANGELOG.md up-to-date with latest changes
 
+## Testing
+
+### Storybook
+```
+$ npm run storybook
+```
+Then visit http://localhost:9009/
+
+### Unit tests
+```
+$ npm run test
+```
+
+### ESLint
+```
+$ npn run lint
+```
+
 ## Built with
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
 
