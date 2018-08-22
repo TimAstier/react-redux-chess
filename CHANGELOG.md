@@ -24,3 +24,4 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Initiate project with create-react-app
 - Content for changelog, readme, license files
 - Storybook and ESLint
+- First components (Square, Board)

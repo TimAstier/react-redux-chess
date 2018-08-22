@@ -1,11 +1,8 @@
 module.exports = {
-    "extends": "airbnb",
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ],
+    "extends": "react-app",
     "rules": {
-      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+      "jsx-a11y/href-no-hash": "off",
+      "jsx-a11y/anchor-is-valid": ["warn", { "aspects": ["invalidHref"] }]
     }
 };

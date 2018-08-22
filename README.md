@@ -34,6 +34,8 @@ $ npm install
 ## Testing
 
 ### Storybook
+A story is a single state of one or more UI components.
+
 ```
 $ npm run storybook
 ```
@@ -44,7 +46,7 @@ Then visit http://localhost:9009/
 $ npm run test
 ```
 
-### ESLint
+### ESLint (eslint-config-react-app)
 ```
 $ npn run lint
 ```
