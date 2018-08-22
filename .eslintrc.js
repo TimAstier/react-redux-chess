@@ -1,5 +1,6 @@
 module.exports = {
-    "extends": "react-app",
+    "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+    "plugins": ["jsx-a11y"],
     "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "jsx-a11y/href-no-hash": "off",
