@@ -16,9 +16,9 @@ $ npm install
 ```
 
 ## Features
-- [ ] Chessboard UI
-- [ ] Pieces
-- [ ] Initialise board with pieces
+- [X] Chessboard UI
+- [X] Pieces
+- [X] Initialise board with pieces
 - [ ] Move pieces with drag-and-drop
 - [ ] Chess logic (legal moves only)
 - [ ] Game moves displayed in PGN format

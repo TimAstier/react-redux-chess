@@ -12,18 +12,18 @@ import white_rook from './white_rook.png';
 import black_rook from './black_rook.png';
 
 const images = {
-  white_king,
-  black_king,
-  white_queen,
-  black_queen,
-  white_pawn,
-  black_pawn,
-  white_knight,
-  black_knight,
-  white_bishop,
-  black_bishop,
-  white_rook,
-  black_rook
+  w_k: white_king,
+  b_k: black_king,
+  w_q: white_queen,
+  b_q: black_queen,
+  w_p: white_pawn,
+  b_p: black_pawn,
+  w_n: white_knight,
+  b_n: black_knight,
+  w_b: white_bishop,
+  b_b: black_bishop,
+  w_r: white_rook,
+  b_r: black_rook
 }
 
 export default images
