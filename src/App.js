@@ -1,17 +1,24 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
 
-class App extends Component {
+import { Board } from './components';
+
+const Wrapper = styled.div`
+  background-color: lightblue;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Wrapper>
+        <Board
+          position="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"
+        />
+      </Wrapper>
     );
   }
 }

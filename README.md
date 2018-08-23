@@ -1,11 +1,11 @@
 # chess-pgn
 
 ## What
-An interactive chessboard with PGN notation of the moves, created from create-react-app.
+An interactive chessboard UI created with React.
 
 ## Why
 
-This is a fun project to stay sharp in Javascript and front-end development while looking for a job as a front-end developer in Stockholm. Let's see how far I can go in a week time!
+This is a pet project to practice and improve my front-end development skills. Full story available on my blog [here](https://timotheeastier.wordpress.com/2018/08/23/pet-project-chessboard-ui-day-1/).
 
 ## Install
 

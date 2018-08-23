@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Piece from '../Piece/Piece';
 
-const Square = styled.div`
+const Wrapper = styled.div`
   width: 60px;
   height: 60px;
   display: flex;
@@ -16,10 +16,10 @@ const Square = styled.div`
 const ALLOWED_CONTENTS = [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r', 'p',
 'P', 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', ''];
 
-const Component = props => {
+const Square = props => {
   const { content } = props;
   return (
-    <Square color={props.color}>
+    <Wrapper color={props.color}>
       {
         content &&
           <Piece
@@ -27,13 +27,13 @@ const Component = props => {
             color={content === content.toUpperCase() ? 'w' : 'b'}
           />
       }
-    </Square>
+    </Wrapper>
   );
 }
 
-Component.propTypes = {
+Square.propTypes = {
   color: PropTypes.oneOf(['black', 'white']).isRequired,
   content: PropTypes.oneOf(ALLOWED_CONTENTS).isRequired
 };
 
-export default Component;
+export default Square;

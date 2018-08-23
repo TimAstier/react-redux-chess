@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Square from '../Square/Square';
-import getSquareContent from '../../utils/getSquareContent';
+import positionToArrayOfPieces from '../../utils/positionToArrayOfPieces';
 
-const Board = styled.div`
+const Wrapper = styled.div`
   width: 480px;
   height: 480px;
   border: 3px solid black;
@@ -12,9 +12,9 @@ const Board = styled.div`
   flex-wrap: wrap;
 `;
 
-const STARTING_POSITION = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR';
+const EMPTY_BOARD = '8/8/8/8/8/8/8/8';
 
-class Component extends React.Component {
+class Board extends React.Component {
   coordinatesToColor = (i, j) => {
     let color = '';
     if (i % 2 === 0) {
@@ -28,13 +28,14 @@ class Component extends React.Component {
   renderSquares(position) {
     const squares = [];
     let index = 0;
+    const arrayOfPieces = positionToArrayOfPieces(position);
     for (let i = 1; i <= 8; i += 1) {
       for (let j = 1; j <= 8; j += 1) {
         squares.push(
           <Square
             key={index}
             color={this.coordinatesToColor(i, j)}
-            content={getSquareContent(position, index)}
+            content={arrayOfPieces[index]}
           />
         );
         index += 1;
@@ -46,22 +47,22 @@ class Component extends React.Component {
   render() {
     let position = this.props.position
     if (position === '') {
-      position = STARTING_POSITION;
+      position = EMPTY_BOARD;
     }
     return (
-      <Board>
+      <Wrapper>
         {this.renderSquares(position)}
-      </Board>
+      </Wrapper>
     );
   }
 }
 
-Component.propTypes = {
+Board.propTypes = {
   position: PropTypes.string.isRequired
 }
 
-Component.defaultProps = {
+Board.defaultProps = {
   position: ''
 }
 
-export default Component;
+export default Board;
