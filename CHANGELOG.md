@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 ---
 
-## [0.0.11] 2018-08-24
+## [0.0.12] 2018-08-24
 
 ### Added
 - Installed libraries:
@@ -33,6 +33,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Separated components between 'components' and 'containers'
 - Added a 'redux' folder with first duck (game)
 - Added a arrayOfPiecesToPosition() util function
+- Added tests for util functions
+- Started tests for game duck
 
 ## [0.0.11] 2018-08-23
 
