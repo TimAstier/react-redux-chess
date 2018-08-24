@@ -6,7 +6,7 @@ An interactive chessboard UI created with React and Redux.
 ## Why
 
 This is a pet project to practice and improve my front-end development skills.  
-Full story available on my blog [here](https://timotheeastier.wordpress.com/2018/08/23/pet-project-chessboard-ui-day-1/).
+Full story available on my [blog](https://timotheeastier.wordpress.com/2018/08/23/pet-project-chessboard-ui-day-1/).
 
 ## Install
 
@@ -32,7 +32,7 @@ $ npm install
 - Hand-made sketches
 - UI presentational components developed in isolation with [Storybook](https://github.com/storybooks/storybook)
 - TDD with unit testing (Jest)
-- Keep CHANGELOG.md updated on a daily basis
+- All changes in CHANGELOG.md
 
 ## Testing
 
@@ -55,7 +55,8 @@ $ npn run lint
 ## Built with
 - [react](https://reactjs.org/) - a JavaScript library for building user interfaces
 - [redux](https://redux.js.org/) - a predictable state container for JavaScript apps
-- [Immutable](https://facebook.github.io/immutable-js/)
+- [reselect](https://github.com/reduxjs/reselect) - selector library for Redux
+- [Immutable](https://facebook.github.io/immutable-js/) - immutable JS objects
 - [styled-components](https://www.styled-components.com/) - a convenient way to style components with CSS
 - [storybook](https://storybook.js.org/) - an UI development environment
 

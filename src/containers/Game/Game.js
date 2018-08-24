@@ -6,27 +6,25 @@ import s from '../../rootSelectors';
 import { Game as GameComponent } from '../../components';
 
 class Game extends React.Component {
-
-  position() {
-    return this.props.fen.split(' ')[0];
-  }
   
   render() {
     return (
       <GameComponent
         fen={this.props.fen}
-        position={this.position()}
+        position={this.props.position}
       />
     )
   }
 }
 
 Game.propTypes = {
-  fen: PropTypes.string.isRequired
+  fen: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired
 }
 
 const mapStateToProps = state => ({
-  fen: s.game.getFen(state)
+  fen: s.game.getFen(state),
+  position: s.game.getPosition(state)
 });
 
 export default connect(

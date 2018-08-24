@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
    - immutable
    - redux-immutable
    - redux-devtools-extension
+   - reselect
 - Set up redux
 - Set up redux dev-tools
 - Separated components between 'components' and 'containers'

@@ -1,10 +1,7 @@
-export const INITIAL_POSITION_FEN =
-  'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
- 
- export const INITIAL_POSITION =
+export const INITIAL_POSITION =
   'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR';
  
- export const INITIAL_POSITION_ARRAY_OF_PIECES = [
+export const INITIAL_POSITION_ARRAY_OF_PIECES = [
   "r", "n", "b", "q", "k", "b", "n", "r",
   "p", "p", "p", "p", "p", "p", "p", "p",
   " ", " ", " ", " ", " ", " ", " ", " ",
