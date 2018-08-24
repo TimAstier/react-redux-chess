@@ -1,11 +1,12 @@
 # chess-pgn
 
 ## What
-An interactive chessboard UI created with React.
+An interactive chessboard UI created with React and Redux.
 
 ## Why
 
-This is a pet project to practice and improve my front-end development skills. Full story available on my blog [here](https://timotheeastier.wordpress.com/2018/08/23/pet-project-chessboard-ui-day-1/).
+This is a pet project to practice and improve my front-end development skills.  
+Full story available on my blog [here](https://timotheeastier.wordpress.com/2018/08/23/pet-project-chessboard-ui-day-1/).
 
 ## Install
 
@@ -29,15 +30,13 @@ $ npm install
 
 ## Development process
 - Hand-made sketches
-- UI Components developed in isolation with react-storybook
+- UI presentational components developed in isolation with [Storybook](https://github.com/storybooks/storybook)
 - TDD with unit testing (Jest)
-- Keep CHANGELOG.md up-to-date with latest changes
+- Keep CHANGELOG.md updated on a daily basis
 
 ## Testing
 
 ### Storybook
-A story is a single state of one or more UI components.
-
 ```
 $ npm run storybook
 ```
@@ -54,7 +53,11 @@ $ npn run lint
 ```
 
 ## Built with
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+- [react](https://reactjs.org/) - a JavaScript library for building user interfaces
+- [redux](https://redux.js.org/) - a predictable state container for JavaScript apps
+- [Immutable](https://facebook.github.io/immutable-js/)
+- [styled-components](https://www.styled-components.com/) - a convenient way to style components with CSS
+- [storybook](https://storybook.js.org/) - an UI development environment
 
 ## License
 

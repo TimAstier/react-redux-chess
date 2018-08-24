@@ -31,6 +31,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Set up redux dev-tools
 - Separated components between 'components' and 'containers'
 - Added a 'redux' folder with first duck (game)
+- Added a arrayOfPiecesToPosition() util function
 
 ## [0.0.11] 2018-08-23
 

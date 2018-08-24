@@ -14,14 +14,14 @@ const Wrapper = styled.div`
 `;
 
 const ALLOWED_CONTENTS = [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r', 'p',
-'P', 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', ''];
+'P', 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', ' '];
 
 const Square = props => {
   const { content } = props;
   return (
     <Wrapper color={props.color}>
       {
-        content &&
+        content && content !== ' ' &&
           <Piece
             type={content.toLowerCase()}
             color={content === content.toUpperCase() ? 'w' : 'b'}

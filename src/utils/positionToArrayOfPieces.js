@@ -6,7 +6,7 @@ const positionToArrayOfPieces = position => {
     }
     if (!isNaN(char)) {
       for (let i = 0; i < parseInt(char, 10); i++) {
-        arrayOfPieces.push('');
+        arrayOfPieces.push(' ');
       }
       return;
     }

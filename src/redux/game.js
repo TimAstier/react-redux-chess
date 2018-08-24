@@ -1,6 +1,6 @@
 import { Map } from 'immutable';
 
-import { INITIAL_POSITION } from '../constants/fen';
+import { INITIAL_POSITION } from '../constants';
 
 // Types
 
