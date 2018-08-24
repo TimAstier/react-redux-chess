@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Game } from './components';
+import { Game } from './containers';
 
 const Wrapper = styled.div`
   background-color: lightblue;

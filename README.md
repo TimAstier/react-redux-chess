@@ -15,10 +15,12 @@ $ cd chess-pgn
 $ npm install
 ```
 
-## Features
+## TODO
 - [X] Chessboard UI
 - [X] Pieces
 - [X] Initialise board with pieces
+- [X] Set up Redux
+- [X] Improve app structure
 - [ ] Move pieces with drag-and-drop
 - [ ] Chess logic (legal moves only)
 - [ ] Game moves displayed in PGN format

@@ -21,18 +21,27 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.0.11] 2018-08-24
 
 ### Added
--
+- Installed libraries:
+   - redux
+   - react-redux
+   - immutable
+   - redux-immutable
+   - redux-devtools-extension
+- Set up redux
+- Set up redux dev-tools
+- Separated components between 'components' and 'containers'
+- Added a 'redux' folder with first duck (game)
 
 ## [0.0.11] 2018-08-23
 
 ### Added
-- <Game/> component
+- Added *Game* component
 
 ## [0.0.1] 2018-08-22
 
 ### Added
-- Initiate project with create-react-app
-- Content for changelog, readme, license files
-- Storybook and ESLint
-- First components: <Square/>, <Board/>, <Piece/>
-- PNG images for the pieces
+- Initiated project with create-react-app
+- Added content for changelog, readme, license files
+- Set up Storybook and ESLint
+- Added first components: *Square*, *Board*, *Piece*
+- Added PNG images for the pieces
