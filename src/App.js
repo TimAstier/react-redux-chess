@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Board } from './components';
+import { Game } from './components';
 
 const Wrapper = styled.div`
   background-color: lightblue;
@@ -15,9 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <Wrapper>
-        <Board
-          position="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"
-        />
+        <Game />
       </Wrapper>
     );
   }
