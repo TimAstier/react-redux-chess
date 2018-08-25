@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 ---
 
+## [0.0.13] 2018-08-25
+
+### Added
+- handle MOVE action
+
 ## [0.0.12] 2018-08-24
 
 ### Added

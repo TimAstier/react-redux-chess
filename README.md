@@ -31,7 +31,7 @@ $ npm install
 ## Development process
 - Hand-made sketches
 - UI presentational components developed in isolation with [Storybook](https://github.com/storybooks/storybook)
-- TDD with unit testing (Jest)
+- TDD with unit testing ([Jest](https://jestjs.io/))
 - All changes in CHANGELOG.md
 
 ## Testing
@@ -59,6 +59,7 @@ $ npn run lint
 - [Immutable](https://facebook.github.io/immutable-js/) - immutable JS objects
 - [styled-components](https://www.styled-components.com/) - a convenient way to style components with CSS
 - [storybook](https://storybook.js.org/) - an UI development environment
+- [jest](https://jestjs.io/) - zero configuration testing platform for JavaScript
 
 ## License
 

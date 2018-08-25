@@ -2,6 +2,7 @@ import { Map } from 'immutable';
 import { createSelector } from 'reselect';
 
 import { INITIAL_POSITION } from '../constants';
+import calculateNextPosition from '../utils/calculateNextPosition';
 
 // Types
 
@@ -28,7 +29,15 @@ export const INITIAL_STATE = Map({
 
 export default function reducer(state = INITIAL_STATE, action = {}) {
   switch (action.type) {
-    // TODO: handle MOVE action
+    case types.MOVE:
+      return state.merge({
+        position: calculateNextPosition(
+          state.get('position'),
+          action.payload.from,
+          action.payload.to
+        ),
+        fullMoveNumber: state.get('fullMoveNumber') + 1
+      })
     default: return state
   }
 }
