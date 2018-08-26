@@ -18,6 +18,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 ---
 
+## [0.0.14] 2018-08-26
+
+### Added
+- Installed libraries:
+  - react-dnd
+  - react-dnd-html5-backend
+- Added first implementation of move via DnD
+### Changed
+- Updated stories to with react-dnd-html5-backend
+
 ## [0.0.13] 2018-08-25
 
 ### Added
@@ -27,12 +37,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Installed libraries:
-   - redux
-   - react-redux
-   - immutable
-   - redux-immutable
-   - redux-devtools-extension
-   - reselect
+  - redux
+  - react-redux
+  - immutable
+  - redux-immutable
+  - redux-devtools-extension
+  - reselect
 - Set up redux
 - Set up redux dev-tools
 - Separated components between 'components' and 'containers'

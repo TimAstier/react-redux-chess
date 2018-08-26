@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd-html5-backend';
 import styled from 'styled-components';
 import Square from '../Square/Square';
 import positionToArrayOfPieces from '../../utils/positionToArrayOfPieces';
@@ -34,6 +36,7 @@ class Board extends React.Component {
         squares.push(
           <Square
             key={index}
+            index={index}
             color={this.coordinatesToColor(i, j)}
             content={arrayOfPieces[index]}
           />
@@ -65,4 +68,4 @@ Board.defaultProps = {
   position: ''
 }
 
-export default Board;
+export default DragDropContext(HTML5Backend)(Board);

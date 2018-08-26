@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Piece from '../Piece/Piece';
+import ITEM_TYPES from '../../constants/itemTypes';
+import { DropTarget } from 'react-dnd';
+import { Piece } from '../../containers';
+import { POSSIBLE_SQUARE_CONTENTS } from '../../constants';
 
 const Wrapper = styled.div`
+  box-sizing: border-box;
   width: 60px;
   height: 60px;
   display: flex;
@@ -11,29 +15,44 @@ const Wrapper = styled.div`
   align-items: center;
   background-color: ${props =>
     props.color === 'black' ? '#BB865E' : '#F3DAB3'};
+  border: ${props => props.isOver ? '3px solid black' : 'none'};
 `;
 
-const ALLOWED_CONTENTS = [ 'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r', 'p',
-'P', 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', ' '];
+const squareTarget = {
+  drop(props) {
+    return { to: props.index };
+  }
+};
+
+function collect(connect, monitor) {
+  return {
+    connectDropTarget: connect.dropTarget(),
+    isOver: monitor.isOver()
+  };
+}
 
 const Square = props => {
-  const { content } = props;
-  return (
-    <Wrapper color={props.color}>
-      {
-        content && content !== ' ' &&
-          <Piece
-            type={content.toLowerCase()}
-            color={content === content.toUpperCase() ? 'w' : 'b'}
-          />
-      }
-    </Wrapper>
+  const { content, index, connectDropTarget } = props;
+  return connectDropTarget(
+    <div>
+      <Wrapper color={props.color} isOver={props.isOver}>
+        {
+          content && content !== ' ' &&
+            <Piece
+              squareIndex={index}
+              type={content.toLowerCase()}
+              color={content === content.toUpperCase() ? 'w' : 'b'}
+            />
+        }
+      </Wrapper>
+    </div>
   );
 }
 
 Square.propTypes = {
   color: PropTypes.oneOf(['black', 'white']).isRequired,
-  content: PropTypes.oneOf(ALLOWED_CONTENTS).isRequired
+  content: PropTypes.oneOf(POSSIBLE_SQUARE_CONTENTS).isRequired,
+  index: PropTypes.number.isRequired
 };
 
-export default Square;
+export default DropTarget(ITEM_TYPES.PIECE, squareTarget, collect)(Square);

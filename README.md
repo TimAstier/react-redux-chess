@@ -54,13 +54,15 @@ $ npn run lint
 
 ## Built with
 - [react](https://reactjs.org/) - a JavaScript library for building user interfaces
+- [react-dnd](http://react-dnd.github.io/react-dnd/) - Drag and Drop for React
 - [redux](https://redux.js.org/) - a predictable state container for JavaScript apps
 - [reselect](https://github.com/reduxjs/reselect) - selector library for Redux
-- [Immutable](https://facebook.github.io/immutable-js/) - immutable JS objects
+- [Immutable](https://facebook.github.io/immutable-js/) - immutable JavaScript objects
 - [styled-components](https://www.styled-components.com/) - a convenient way to style components with CSS
 - [storybook](https://storybook.js.org/) - an UI development environment
 - [jest](https://jestjs.io/) - zero configuration testing platform for JavaScript
 
+PNG files of chess pieces are from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:PNG_chess_pieces/Standard_transparent).
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
