@@ -13,9 +13,13 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props =>
-    props.color === 'black' ? '#BB865E' : '#F3DAB3'};
-  border: ${props => props.isOver ? '3px solid black' : 'none'};
+  background-color:
+    ${props => {
+      if (!props.isOver) {
+        return props.color === 'black' ? '#BB865E' : '#F3DAB3';
+      }
+      return props.color === 'black' ? '#a26c44' : '#ecc587'; 
+    }};
 `;
 
 const squareTarget = {
