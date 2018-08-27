@@ -41,14 +41,25 @@ class Piece extends React.Component {
   image(color, type) {
     return images[color + '_' + type];
   }
-
-componentDidMount() {
-  // This removes the background-color of img  
-  const img = new Image();
-  img.src = this.image(this.props.color, this.props.type);
-  img.onload = () => this.props.connectDragPreview(img);
-}
   
+  setDragImage() {
+    // This removes the background-color of img  
+    const img = new Image();
+    img.src = this.image(this.props.color, this.props.type);
+    img.onload = () => this.props.connectDragPreview(img);
+  }
+
+  componentDidMount() {
+    this.setDragImage();
+  }
+  
+  componentDidUpdate(prevProps) {
+    if (prevProps.color + prevProps.type !==
+      this.props.color + this.props.type) {
+      this.setDragImage();
+    }
+  }
+
   render() {
     const { isDragging, color, type, connectDragSource }
       = this.props;
