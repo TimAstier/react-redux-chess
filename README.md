@@ -26,7 +26,7 @@ $ npm install
 - [ ] Show the active color
 - [ ] Implement chess rules
   - [X] Should not be able to move to current square
-  - [ ] Can only move pieces with active color
+  - [X] Can only move pieces with active color
   - [ ] Restrict move possibilities based on piece type
     - [ ] rook
     - [ ] knight

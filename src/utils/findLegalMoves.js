@@ -17,18 +17,36 @@ const findLegalMoves = (
   let legalMoves = [];
   
   // check parameters
-  if (!position) {
+  if (position === undefined) {
     throw new Error(ERRORS.undefinedPosition);
+  }
+  
+  if (originIndex === undefined) {
+    throw new Error(ERRORS.undefinedOriginIndex);
   }
 
   const arrayOfPieces = positionToArrayOfPieces(position);
+  const squareContent = arrayOfPieces[originIndex];
   
   // an empty square has no legal move
-  if (arrayOfPieces[originIndex] === ' ') {
+  if (squareContent === ' ') {
     return [];
   } 
   
-  // can only move pieces with active color 
+  // return an empty array for pieces of the wrong active color
+  if (squareContent.toUpperCase() === squareContent) {
+    if (activeColor !== 'w') {
+      return [];
+    }
+  } else {
+    if (activeColor !== 'b') {
+      return [];
+    }
+  }
+  
+  // TODO:
+  // add candidate moves for this pieces
+  legalMoves.push(1)// (test)
   
   // exludes the origin square
   legalMoves = legalMoves.filter(e => e !== originIndex);
