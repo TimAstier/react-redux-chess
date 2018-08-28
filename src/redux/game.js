@@ -36,6 +36,7 @@ export default function reducer(state = INITIAL_STATE, action = {}) {
           action.payload.from,
           action.payload.to
         ),
+        activeColor: state.get('activeColor') === 'w' ? 'b' : 'w',
         fullMoveNumber: state.get('fullMoveNumber') + 1
       })
     default: return state
