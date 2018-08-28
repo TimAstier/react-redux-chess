@@ -1,8 +1,8 @@
 import { Map } from 'immutable';
 import { createSelector } from 'reselect';
-
 import { INITIAL_POSITION } from '../constants';
 import calculateNextPosition from '../utils/calculateNextPosition';
+import findLegalMoves from '../utils/findLegalMoves';
 
 // Types
 
@@ -73,6 +73,18 @@ const getFen = createSelector(
   }
 );
 
+const getLegalMoves = (state, props) => {
+  const { index } = props;
+  return findLegalMoves(state.toJS(), index);  
+};
+
+const makeGetLegalMoves = () => {
+  return createSelector(
+    getLegalMoves,
+    legalMoves => legalMoves 
+  )
+}
+
 export const selectors = {
   getPosition,
   getActiveColor,
@@ -80,5 +92,6 @@ export const selectors = {
   getEnPassantTarget,
   getHalfMoveClock,
   getFullMoveNumber,
-  getFen
+  getFen,
+  makeGetLegalMoves
 };

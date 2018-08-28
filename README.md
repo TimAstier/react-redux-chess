@@ -22,10 +22,25 @@ $ npm install
 - [X] Initialise board with pieces
 - [X] Set up Redux
 - [X] Improve app structure
-- [ ] Move pieces with drag-and-drop
-- [ ] Chess logic (legal moves only)
+- [X] Move pieces with drag-and-drop
+- [ ] Show the active color
+- [ ] Implement chess rules
+  - [X] Should not be able to move to current square
+  - [ ] Can only move pieces with active color
+  - [ ] Restrict move possibilities based on piece type
+    - [ ] rook
+    - [ ] knight
+    - [ ] bishop
+    - [ ] queen
+    - [ ] king
+    - [ ] pawn
+  - [ ] Pieces can't jump above other pieces (except knights)
+  - [ ] Castling
+  - [ ] Checkmate
+- [ ] Start a new game
+- [ ] Move to previous / next move
+- [ ] Highlight last move
 - [ ] Game moves displayed in PGN format
-- [ ] Button to move to previous / next move
 - [ ] Go back to a previous position by clicking the PGN
 
 ## Development process

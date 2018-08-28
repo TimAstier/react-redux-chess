@@ -19,10 +19,14 @@ const PieceSource = {
   },
   endDrag(props, monitor) {
     if (monitor.didDrop()) {
-      return props.move(
-        SQUARE_COORDINATES[props.squareIndex],
-        SQUARE_COORDINATES[monitor.getDropResult().to]
-      );
+      const toIndex = monitor.getDropResult().to;
+      // TODO: Get legal moves from Square
+      if (props.legalMoves.includes(toIndex)) {
+        return props.move(
+          SQUARE_COORDINATES[props.squareIndex],
+          SQUARE_COORDINATES[toIndex]
+        );
+      }
     }
   }
 };
@@ -82,7 +86,8 @@ Piece.propTypes = {
   squareIndex: PropTypes.number.isRequired,
   move: PropTypes.func.isRequired,
   connectDragPreview: PropTypes.func.isRequired,
-  isDragging: PropTypes.bool.isRequired
+  isDragging: PropTypes.bool.isRequired,
+  legalMoves: PropTypes.array.isRequired
 };
 
 export default DragSource(ITEM_TYPES.PIECE, PieceSource, collect)(Piece);

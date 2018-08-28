@@ -36,7 +36,7 @@ function collect(connect, monitor) {
 }
 
 const Square = props => {
-  const { content, index, connectDropTarget } = props;
+  const { content, index, connectDropTarget, legalMoves } = props;
   return connectDropTarget(
     <div>
       <Wrapper color={props.color} isOver={props.isOver}>
@@ -46,6 +46,7 @@ const Square = props => {
               squareIndex={index}
               type={content.toLowerCase()}
               color={content === content.toUpperCase() ? 'w' : 'b'}
+              legalMoves={legalMoves}
             />
         }
       </Wrapper>
@@ -56,7 +57,8 @@ const Square = props => {
 Square.propTypes = {
   color: PropTypes.oneOf(['black', 'white']).isRequired,
   content: PropTypes.oneOf(POSSIBLE_SQUARE_CONTENTS).isRequired,
-  index: PropTypes.number.isRequired
+  index: PropTypes.number.isRequired,
+  legalMoves: PropTypes.array.isRequired
 };
 
 export default DropTarget(ITEM_TYPES.PIECE, squareTarget, collect)(Square);

@@ -8,12 +8,7 @@ class Piece extends React.Component {
   
   render() {
     return (
-      <PieceComponent
-        color={this.props.color}
-        type={this.props.type}
-        squareIndex={this.props.squareIndex}
-        move={this.props.move}
-      />
+      <PieceComponent { ...this.props } />
     );
   }
 }
@@ -22,7 +17,8 @@ Piece.propTypes = {
   color: PropTypes.oneOf(['b', 'w']).isRequired,
   type: PropTypes.oneOf(['k', 'q', 'p', 'n', 'b', 'r']).isRequired,
   squareIndex: PropTypes.number.isRequired,
-  move: PropTypes.func.isRequired
+  move: PropTypes.func.isRequired,
+  legalMoves: PropTypes.array.isRequired
 };
 
 export default connect(

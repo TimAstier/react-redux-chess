@@ -18,6 +18,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 ---
 
+## [0.0.15] 2018-08-28
+
+### Added
+- First implementation of move validation
+### Changed
+- Squares hovered by a piece are now highlighted
+### Fixed
+- Wrong piece drag preview after a capture occurred
+
 ## [0.0.14] 2018-08-26
 
 ### Added
