@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { SQUARE_COORDINATES } from '../../constants';
+import { ALGEBRIC_NOTATIONS } from '../../constants';
 import ITEM_TYPES from '../../constants/itemTypes';
 import { DragSource } from 'react-dnd';
 
@@ -23,8 +23,8 @@ const PieceSource = {
       // TODO: Get legal moves from Square
       if (props.legalMoves.includes(toIndex)) {
         return props.move(
-          SQUARE_COORDINATES[props.squareIndex],
-          SQUARE_COORDINATES[toIndex]
+          ALGEBRIC_NOTATIONS[props.squareIndex],
+          ALGEBRIC_NOTATIONS[toIndex]
         );
       }
     }

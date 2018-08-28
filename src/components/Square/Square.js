@@ -58,7 +58,8 @@ Square.propTypes = {
   color: PropTypes.oneOf(['black', 'white']).isRequired,
   content: PropTypes.oneOf(POSSIBLE_SQUARE_CONTENTS).isRequired,
   index: PropTypes.number.isRequired,
-  legalMoves: PropTypes.array.isRequired
+  legalMoves: PropTypes.array.isRequired,
+  isOver: PropTypes.bool
 };
 
 export default DropTarget(ITEM_TYPES.PIECE, squareTarget, collect)(Square);

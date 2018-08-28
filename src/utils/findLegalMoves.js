@@ -44,8 +44,7 @@ const findLegalMoves = (
     }
   }
   
-  // TODO:
-  // add candidate moves for this pieces
+  // TODO: add candidate moves for this pieces
   legalMoves.push(1)// (test)
   
   // exludes the origin square
@@ -54,4 +53,4 @@ const findLegalMoves = (
   return legalMoves;
 }
 
-export default findLegalMoves
+export default findLegalMoves;

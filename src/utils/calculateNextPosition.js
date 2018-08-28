@@ -1,13 +1,13 @@
 import positionToArrayOfPieces from './positionToArrayOfPieces';
 import arrayOfPiecesToPosition from './arrayOfPiecesToPosition';
-import squareCoordinateToIndex from './squareCoordinateToIndex';
+import algebricToIndex from './algebricToIndex';
 
-const calculateNextPosition = (position, from , to) => {
+const calculateNextPosition = (position, algebricOrigin, algebricDestination) => {
   let fromIndex, toIndex, arrayOfPieces, movedPiece;
   
   // convert 'from' and 'to' string into array indexes
-  fromIndex = squareCoordinateToIndex(from);
-  toIndex = squareCoordinateToIndex(to);
+  fromIndex = algebricToIndex(algebricOrigin);
+  toIndex = algebricToIndex(algebricDestination);
   
   // convert position into arrayOfPieces
   arrayOfPieces = positionToArrayOfPieces(position);
@@ -21,4 +21,4 @@ const calculateNextPosition = (position, from , to) => {
   return arrayOfPiecesToPosition(arrayOfPieces);
 }
 
-export default calculateNextPosition
+export default calculateNextPosition;

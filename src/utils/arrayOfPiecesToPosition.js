@@ -32,4 +32,4 @@ const arrayOfPiecesToPosition = array => {
   return position;
 }
 
-export default arrayOfPiecesToPosition
+export default arrayOfPiecesToPosition;
