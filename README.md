@@ -2,6 +2,7 @@
 
 ## What
 An interactive chessboard UI created with React and Redux.
+See the [demo](https://chess-pgn.herokuapp.com/).
 
 ## Why
 
@@ -16,6 +17,18 @@ $ cd chess-pgn
 $ npm install
 ```
 
+## Built with
+- [react](https://reactjs.org/) - a JavaScript library for building user interfaces
+- [react-dnd](http://react-dnd.github.io/react-dnd/) - Drag and Drop for React
+- [redux](https://redux.js.org/) - a predictable state container for JavaScript apps
+- [reselect](https://github.com/reduxjs/reselect) - selector library for Redux
+- [Immutable](https://facebook.github.io/immutable-js/) - immutable JavaScript objects
+- [styled-components](https://www.styled-components.com/) - a convenient way to style components with CSS
+- [storybook](https://storybook.js.org/) - an UI development environment
+- [jest](https://jestjs.io/) - zero configuration testing platform for JavaScript
+
+PNG files of chess pieces are from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:PNG_chess_pieces/Standard_transparent).
+
 ## TODO
 - [X] Chessboard UI
 - [X] Pieces
@@ -24,7 +37,6 @@ $ npm install
 - [X] Improve app structure
 - [X] Move pieces with drag-and-drop
 - [X] Active color indicator
-- [ ] Show the legal moves when dragging a piece
 - [ ] Implement chess rules
   - [X] Should not be able to move to current square
   - [X] Can only move pieces with active color
@@ -68,20 +80,13 @@ $ npm run test
 
 ### ESLint (eslint-config-react-app)
 ```
-$ npn run lint
+$ npm run lint
 ```
 
-## Built with
-- [react](https://reactjs.org/) - a JavaScript library for building user interfaces
-- [react-dnd](http://react-dnd.github.io/react-dnd/) - Drag and Drop for React
-- [redux](https://redux.js.org/) - a predictable state container for JavaScript apps
-- [reselect](https://github.com/reduxjs/reselect) - selector library for Redux
-- [Immutable](https://facebook.github.io/immutable-js/) - immutable JavaScript objects
-- [styled-components](https://www.styled-components.com/) - a convenient way to style components with CSS
-- [storybook](https://storybook.js.org/) - an UI development environment
-- [jest](https://jestjs.io/) - zero configuration testing platform for JavaScript
+## Deployment
 
-PNG files of chess pieces are from [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:PNG_chess_pieces/Standard_transparent).
+A demo is deployed on heroku using [create-react-app-buildpack](https://github.com/mars/create-react-app-buildpack).
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details.
