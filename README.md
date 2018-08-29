@@ -1,8 +1,8 @@
 # chess-pgn
 
 ## What
-An interactive chessboard UI created with React and Redux.
-See the [demo](https://chess-pgn.herokuapp.com/).
+An interactive chessboard UI created with React and Redux.  
+See [demo](https://chess-pgn.herokuapp.com/) on Heroku.
 
 ## Why
 
@@ -48,9 +48,9 @@ PNG files of chess pieces are from [Wikimedia Commons](https://commons.wikimedia
     - [X] king
     - [X] pawn
   - [X] Pieces can't move on a square occupied by own color
+  - [X] Pieces can't jump above other pieces (except knights)
   - [ ] King can't move to an attacked square
   - [ ] Handle 'En passant' capture
-  - [ ] Pieces can't jump above other pieces (except knights)
   - [ ] Castling
   - [ ] Checkmate
 - [ ] Start a new game

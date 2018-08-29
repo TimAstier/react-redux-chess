@@ -7,6 +7,17 @@ import LeftSidebar from '../LeftSidebar/LeftSidebar';
 
 const Wrapper = styled.div`
   display: flex;
+  justify-content: center;
+`;
+
+const LeftWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
+`;
+
+const RightWrapper = styled.div`
+  width: 200px;
 `;
 
 class Game extends React.Component {
@@ -14,10 +25,13 @@ class Game extends React.Component {
   render() {
     return (
       <Wrapper>
-        <LeftSidebar activeColor={this.props.activeColor} />
+        <LeftWrapper>
+          <LeftSidebar activeColor={this.props.activeColor} />
+        </LeftWrapper>
         <Board
           position={this.props.position}
         />
+        <RightWrapper />
       </Wrapper>
     )
   }
