@@ -18,6 +18,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 ---
 
+## [0.0.2] 2018-08-29
+
+### Added
+- Basic piece move validation
+### Fixed
+- Wrong next position calculated when moving piece from square index 63
+
 ## [0.0.15] 2018-08-28
 
 ### Added

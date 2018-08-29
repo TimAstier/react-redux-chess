@@ -4,7 +4,7 @@ const arrayOfPiecesToPosition = array => {
   let position = '';
   let emptySquares = 0;
   array.forEach((squareContent, i) => {
-    if (i === array.length - 1 && emptySquares !== 0) {
+    if (i === array.length - 1 && squareContent === ' ') {
       position += emptySquares + 1;
       return;
     }

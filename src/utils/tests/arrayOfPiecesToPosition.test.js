@@ -17,4 +17,9 @@ describe('arrayOfPiecesToPosition', () => {
     const expectedPosition = TEST_POSITION;
     expect(arrayOfPiecesToPosition(arrayOfPieces)).toEqual(expectedPosition);
   });
+  it('correctly handle positions with empty square 63', () => {
+    const arrayOfPieces = TEST_POSITION_ARRAY_OF_PIECES;
+    const expectedPosition = TEST_POSITION;
+    expect(arrayOfPiecesToPosition(arrayOfPieces)).toEqual(expectedPosition);
+  });
 });

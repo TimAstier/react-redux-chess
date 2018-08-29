@@ -1,6 +1,6 @@
 const indexToXy = index => {
-  const x = (index + 1) % 8;
-  const y = 8 - Math.floor((index + 1) / 8);
+  const x = index % 8 + 1;
+  const y = 8 - Math.floor(index / 8)
   return [x, y];
 }
 

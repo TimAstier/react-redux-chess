@@ -1,22 +1,24 @@
 import positionToArrayOfPieces from './positionToArrayOfPieces';
 import ERRORS from '../constants/errors';
+import indexToXy from '../utils/indexToXy';
+import xyToIndex from '../utils/xyToIndex';
+import findPieceMoves from '../utils/findPieceMoves';
 
 // Returns an array of legal square index destinations for the origin square 
-const findLegalMoves = (
-  {
+const findLegalMoves = (fen, originIndex) => {
+  const {
     position,
     activeColor,
-    castlingAvailability,
-    enPassantTarget,
-    fullMoveNumber,
-    halfMoveClock
-  },
-  originIndex
-) => {
-
-  let legalMoves = [];
+    // castlingAvailability,
+    // enPassantTarget,
+    // fullMoveNumber,
+    // halfMoveClock
+  } = fen;
+  let legalIndexes = [];
+  let legalXYs = [];
   
-  // check parameters
+  /***** check parameters *****/
+  
   if (position === undefined) {
     throw new Error(ERRORS.undefinedPosition);
   }
@@ -24,9 +26,12 @@ const findLegalMoves = (
   if (originIndex === undefined) {
     throw new Error(ERRORS.undefinedOriginIndex);
   }
+  
+  /***** END check parameters *****/
 
   const arrayOfPieces = positionToArrayOfPieces(position);
   const squareContent = arrayOfPieces[originIndex];
+  const XY = indexToXy(originIndex);
   
   // an empty square has no legal move
   if (squareContent === ' ') {
@@ -44,13 +49,18 @@ const findLegalMoves = (
     }
   }
   
-  // TODO: add candidate moves for this pieces
-  legalMoves.push(1)// (test)
+  // Add legal moves for this pieces
+  legalXYs = legalXYs.concat(
+    findPieceMoves(squareContent, XY, fen)
+  );
+  
+  // convert XYs into square indexes
+  legalIndexes = legalXYs.map(e => xyToIndex(...e));
   
   // exludes the origin square
-  legalMoves = legalMoves.filter(e => e !== originIndex);
+  legalIndexes = legalIndexes.filter(e => e !== originIndex);
   
-  return legalMoves;
+  return legalIndexes;
 }
 
 export default findLegalMoves;

@@ -1,6 +1,11 @@
+export const WHITE_PIECES = ['R', 'N', 'B', 'Q', 'K', 'P'];
+export const BLACK_PIECES = ['r', 'n', 'b', 'q', 'k', 'p'];
+
+// An empty square contains an empty string
 export const POSSIBLE_SQUARE_CONTENTS = [
-  'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r', 'p',
-  'P', 'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', ' '
+  ...WHITE_PIECES,
+  ...BLACK_PIECES,
+  ' '
 ];
 
 export const INITIAL_POSITION =
@@ -18,7 +23,7 @@ export const INITIAL_POSITION_ARRAY_OF_PIECES = [
  ];
  
 export const TEST_POSITION =
-  '3r2k1/p6p/7b/8/N1Pp4/P2K1p2/4r3/R2R4';
+  '3r2k1/p6p/7b/8/N1Pp4/P2K1p2/4r3/R2R2R1';
 
 export const TEST_POSITION_ARRAY_OF_PIECES = [
   " ", " ", " ", "r", " ", " ", "k", " ",
@@ -28,7 +33,7 @@ export const TEST_POSITION_ARRAY_OF_PIECES = [
   "N", " ", "P", "p", " ", " ", " ", " ",
   "P", " ", " ", "K", " ", "p", " ", " ",
   " ", " ", " ", " ", "r", " ", " ", " ",
-  "R", " ", " ", "R", " ", " ", " ", " "
+  "R", " ", " ", "R", " ", " ", "R", " "
 ];
 
 export const ALGEBRIC_NOTATIONS = [

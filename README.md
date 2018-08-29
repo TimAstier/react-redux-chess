@@ -24,16 +24,20 @@ $ npm install
 - [X] Improve app structure
 - [X] Move pieces with drag-and-drop
 - [ ] Show the active color
+- [ ] Show the legal moves when dragging a piece
 - [ ] Implement chess rules
   - [X] Should not be able to move to current square
   - [X] Can only move pieces with active color
-  - [ ] Restrict move possibilities based on piece type
-    - [ ] rook
-    - [ ] knight
-    - [ ] bishop
-    - [ ] queen
-    - [ ] king
-    - [ ] pawn
+  - [X] Restrict move possibilities based on piece type
+    - [X] rook
+    - [X] knight
+    - [X] bishop
+    - [X] queen
+    - [X] king
+    - [X] pawn
+  - [X] Pieces can't move on a square occupied by own color
+  - [ ] King can't move to an attacked square
+  - [ ] Handle 'En passant' capture
   - [ ] Pieces can't jump above other pieces (except knights)
   - [ ] Castling
   - [ ] Checkmate
