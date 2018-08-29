@@ -23,7 +23,7 @@ $ npm install
 - [X] Set up Redux
 - [X] Improve app structure
 - [X] Move pieces with drag-and-drop
-- [ ] Show the active color
+- [X] Active color indicator
 - [ ] Show the legal moves when dragging a piece
 - [ ] Implement chess rules
   - [X] Should not be able to move to current square

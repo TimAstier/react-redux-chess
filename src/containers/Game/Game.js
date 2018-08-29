@@ -9,22 +9,21 @@ class Game extends React.Component {
   
   render() {
     return (
-      <GameComponent
-        fen={this.props.fen}
-        position={this.props.position}
-      />
+      <GameComponent { ...this.props } />
     )
   }
 }
 
 Game.propTypes = {
   fen: PropTypes.string.isRequired,
-  position: PropTypes.string.isRequired
+  position: PropTypes.string.isRequired,
+  activeColor: PropTypes.oneOf(['w', 'b']).isRequired
 }
 
 const mapStateToProps = state => ({
   fen: s.game.getFen(state),
-  position: s.game.getPosition(state)
+  position: s.game.getPosition(state),
+  activeColor: s.game.getActiveColor(state)
 });
 
 export default connect(

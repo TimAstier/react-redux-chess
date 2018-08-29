@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Basic piece move validation
+- Active color indicator
 ### Fixed
 - Wrong next position calculated when moving piece from square index 63
 
