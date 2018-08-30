@@ -1,5 +1,7 @@
 # chess-pgn
 
+[![Build Status](https://travis-ci.org/TimAstier/chess-pgn.svg?branch=master)](https://travis-ci.org/TimAstier/chess-pgn)
+
 ## What
 An interactive chessboard UI created with React and Redux.  
 See [demo](https://chess-pgn.herokuapp.com/) on Heroku.

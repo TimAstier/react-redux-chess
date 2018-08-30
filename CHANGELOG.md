@@ -18,6 +18,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Security
 ---
 
+## [0.0.21] 2018-08-30
+
+### Added
+- CI with Travis
+
 ## [0.0.2] 2018-08-29
 
 ### Added

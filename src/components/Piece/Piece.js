@@ -20,7 +20,6 @@ const PieceSource = {
   endDrag(props, monitor) {
     if (monitor.didDrop()) {
       const toIndex = monitor.getDropResult().to;
-      // TODO: Get legal moves from Square
       if (props.legalMoves.includes(toIndex)) {
         return props.move(
           ALGEBRIC_NOTATIONS[props.squareIndex],
