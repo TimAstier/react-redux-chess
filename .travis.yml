@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+script:
+  - npm run lint
+  - npm test
+  - npm run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: o/O9qhOUDZ0mIReysZ88mX21ob6q2ogb/Xfu3ZZT7agpwGTCwzIJ2yc9LZFl5xeSfOf1ZvD8HxALJAQ6Po8mRt/aeda615slIciNqZiu+NeaziD7qqZH1kAReG7Tpx9gAcGQmQhWzcZedGyukiOdSpi/7dbBN/nd81ontVjuzDb45IWZFxwCf1465SvIsHFYS4ykY26xZTttt20cIrjzPrE6J3v9tRRThLu+qlgaiZfohw2pyTJZ/lBay7nxcSGWSWOCqde2HvBpM3ux39YFJrSKCHeMyacO25I/3uf1sB3eh9QcEpT9sKyAiJ49x6NUgAW5DaGOp8e6h/3krXZOaPUuWo64haKuqoLvjbb31pfv1G0BpQmBLHlMYRfCg4UoHIjQYmXErpdnEcsrCaKoEjooJwd/AbWJkve8C5jpvmv80PgcBnkBxKr7LML3+E7JntJ60o1WMaKgsZcUmjUXwYtLYOpbBH21uOZ4MsiEtxxBHbp6ARGFEokLknx/klvD8lraTBQPWsq+MYnQiW0rUvxvMgVqRAKYSPppdS/vOigGyt2sxtESt6VCwDaeDvAMmzyHzFMBbby/5vmRUTRwNNRxrRG9YP1BMhfWFX2Z19fQHbKPg7VWj4t+zfGQfulejKOzl9eUDMgsKuK5m8DpETLUJBR+FN+ymC8PlvewDGg=
+  app: chess-pgn
+  on:
+    repo: TimAstier/chess-pgn
