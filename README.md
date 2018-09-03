@@ -1,9 +1,9 @@
-# chess-pgn
+# React Redux Chess
 
 [![Build Status](https://travis-ci.org/TimAstier/chess-pgn.svg?branch=master)](https://travis-ci.org/TimAstier/chess-pgn)
 
 ## What
-An interactive chessboard UI created with React and Redux.  
+An interactive chessboard built with React and Redux.  
 See [demo](https://chess-pgn.herokuapp.com/) on Heroku.
 
 ## Why
@@ -14,8 +14,8 @@ Full story available on my [blog](https://timotheeastier.wordpress.com/2018/08/2
 ## Install
 
 ```
-$ git clone https://github.com/TimAstier/chess-pgn
-$ cd chess-pgn
+$ git clone https://github.com/TimAstier/react-redux-chess
+$ cd react-redux-chess
 $ npm install
 ```
 

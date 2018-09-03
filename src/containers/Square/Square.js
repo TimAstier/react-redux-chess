@@ -21,7 +21,10 @@ Square.propTypes = {
 };
 
 // Sharing Selectors Across Multiple Components
-// https://redux.js.org/recipes/computingderiveddata#sharing-selectors-across-multiple-components
+// See articles:
+// 1) https://redux.js.org/recipes/computingderiveddata#sharing-selectors-across-multiple-components
+// 2) https://blog.isquaredsoftware.com/2017/12/idiomatic-redux-using-reselect-selectors/
+//    under title 'Advanced Optimizations with React-Redux'
 
 const makeMapStateToProps = () => {
   const getLegalMoves = s.makeGetLegalMoves()
