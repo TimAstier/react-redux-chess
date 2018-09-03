@@ -4,7 +4,7 @@
 
 ## What
 An interactive chessboard built with React and Redux.  
-See [demo](https://chess-pgn.herokuapp.com/) on Heroku.
+See [demo](https://react-redux-chess.herokuapp.com/) on Heroku.
 
 ## Why
 
