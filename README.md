@@ -1,6 +1,6 @@
 # React Redux Chess
 
-[![Build Status](https://travis-ci.org/TimAstier/chess-pgn.svg?branch=master)](https://travis-ci.org/TimAstier/chess-pgn)
+[![Build Status](https://travis-ci.org/TimAstier/react-redux-chess.svg?branch=master)](https://travis-ci.org/TimAstier/react-redux-chess)
 
 ## What
 An interactive chessboard built with React and Redux.  
